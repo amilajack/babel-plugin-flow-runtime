@@ -5,6 +5,15 @@ A babel plugin which transforms [Flow](https://flowtype.org/) annotations into `
 Supports all of flow's syntax, aims for full compatibilty with flow, found a bug? Please [report it](https://github.com/codemix/flow-runtime/issues).
 
 
+## Installation
+
+This plugin has a runtime dependency on [flow-runtime](https://github.com/codemix/flow-runtime/tree/master/packages/flow-runtime), so make sure you install that along with this package:
+
+```sh
+npm install --save-dev github:amilajack/babel-plugin-flow-runtime
+npm install --save flow-runtime
+```
+
 ## What?
 
 Turns code like this:
@@ -31,16 +40,6 @@ Which you can then use like this:
 ```js
 User.assert({id: 123, name: 'Sally'}); // ok
 User.assert({id: false, name: 'Bob'}); // throws
-```
-
-
-## Installation
-
-This plugin has a runtime dependency on [flow-runtime](https://github.com/codemix/flow-runtime/tree/master/packages/flow-runtime), so make sure you install that along with this package:
-
-```sh
-npm install --save-dev babel-plugin-flow-runtime
-npm install --save flow-runtime
 ```
 
 Next, add the following to your babel configuration or `.babelrc`:
